@@ -1,168 +1,132 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* [CSS 1] background-color, [CSS 5] margin, [CSS 6] padding 사용 */
 body {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    background-color: #fbf8f3;
-    color: #2c221e;
-    line-height: 1.7;
+    background-color: #2b263a; /* 어두운 레트로 배경색 */
+    color: #ffffff;
+    font-family: 'Malgun Gothic', sans-serif;
+    margin: 0;
+    padding: 20px;
 }
 
-header {
-    border-bottom: 3px double #5c4033;
-    padding: 1.5rem 2rem;
-    text-align: center;
-}
-
-nav {
-    max-width: 800px;
+/* [CSS 2] border, [CSS 3] width 사용 */
+#main-container {
+    width: 90%;
+    max-width: 850px;
     margin: 0 auto;
+    padding: 20px;
+    background-color: #1f1a2e;
+    border: 3px solid #5a4b7c;
 }
 
-.logo {
-    font-size: 2.2rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #4a0e17;
-    margin-bottom: 0.5rem;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 2rem;
-    border-top: 1px solid #d3c4b1;
-    padding-top: 0.5rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: #5c4033;
-    font-style: italic;
-}
-
-main {
-    max-width: 800px;
-    margin: 2.5rem auto;
-    padding: 0 1rem;
-}
-
-.hero {
-    border-bottom: 1px solid #d3c4b1;
-    padding-bottom: 2rem;
+/* 헤더 로고 크기 설정 ([CSS 3] width, [CSS 4] height) */
+.header-section {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 25px;
 }
 
-.hero h1 {
-    font-size: 2.2rem;
-    color: #4a0e17;
-    margin-bottom: 0.8rem;
+.logo-img {
+    width: 260px;
+    height: auto;
 }
 
-.btn-group {
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-button {
-    padding: 0.5rem 1.5rem;
-    border: 1px solid #4a0e17;
-    font-family: inherit;
-    cursor: pointer;
-}
-
-.btn-primary {
-    background-color: #4a0e17;
-    color: #fbf8f3;
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: #4a0e17;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-
-.card h2 {
-    font-size: 1.3rem;
-    color: #4a0e17;
-    border-bottom: 2px solid #4a0e17;
-    padding-bottom: 0.2rem;
-    margin-bottom: 1rem;
-}
-
-blockquote {
-    margin: 1.5rem 0;
-    padding: 0 1rem;
-    font-style: italic;
-    text-align: center;
-    color: #6b5246;
-}
-
-ul {
-    margin-left: 1.5rem;
-    margin-top: 0.5rem;
-}
-
-.form-group {
-    margin-bottom: 1rem;
-}
-
-label {
-    display: block;
+.highlight {
+    color: #ffde00;
     font-weight: bold;
-    font-size: 0.9rem;
 }
 
-input, select {
-    width: 100%;
-    padding: 0.4rem;
-    border: 1px solid #8c7a6b;
-    background-color: #fffefb;
-    font-family: inherit;
+/* [CSS 7] display: flex 사용 (배치 구도를 수평으로 나눔) */
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-table {
+/* 왼쪽 게임 설명 박스 */
+.info-box {
+    flex: 1;
+    min-width: 280px;
+    background-color: #252033;
+    padding: 15px;
+    border: 2px solid #3d3453;
+}
+
+/* [HTML 11] 표(table) 스타일 정의 */
+#game-info-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1.5rem;
+    margin: 15px 0;
 }
 
-th, td {
-    padding: 0.5rem;
-    text-align: left;
-    border-bottom: 1px solid #d3c4b1;
-}
-
-th {
-    border-bottom: 2px solid #5c4033;
-    color: #4a0e17;
-}
-
-.badge {
-    font-weight: bold;
-    font-size: 0.8rem;
-}
-
-.badge.success { color: #1b4332; }
-.badge.warning { color: #854d0e; }
-
-footer {
+#game-info-table th, #game-info-table td {
+    border: 1px solid #5a4b7c;
+    padding: 8px;
     text-align: center;
-    padding: 3rem 0 1rem;
-    border-top: 1px solid #d3c4b1;
-    margin-top: 3rem;
-    font-size: 0.85rem;
-    color: #786454;
+}
+
+#game-info-table th {
+    background-color: #3b3152;
+    color: #ffde00;
+}
+
+.feature-list, .guide-list {
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+/* [CSS 7] display: inline-block 사용 */
+.external-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #e74c3c;
+    color: #ffffff;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    font-weight: bold;
+}
+
+.external-link:hover {
+    background-color: #ff5e4d;
+}
+
+/* 오른쪽 게임 메뉴 박스 (목표 디자인 빨간 테두리 메뉴 반영) */
+.game-menu-box {
+    width: 200px;
+    height: 240px;
+    background-color: #110d18;
+    border: 4px solid #cc3333;
+    padding: 15px;
+}
+
+.menu-header {
+    text-align: center;
+    color: #ffde00;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 마우스 올렸을 때(hover) 레트로 효과 부여 */
+.menu-item {
+    padding: 8px 5px;
+    margin-bottom: 6px;
+    background-color: #241a33;
+    border: 1px solid #4a3860;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.menu-item:hover {
+    background-color: #e74c3c;
+    color: #ffffff;
+}
+
+.menu-item .arrow {
+    display: inline-block;
+    margin-right: 5px;
+    color: #ffde00;
 }
