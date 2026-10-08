@@ -1,198 +1,140 @@
-/* 1. 전체 화면 중앙 정렬 */
+/* 전체 기본 설정 */
 body {
-    /* [필수] background-color, margin, padding, display: flex */
-    background-color: #1b1721;
+    /* 필수 요소: margin, padding, background-color */
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Courier New', monospace, sans-serif;
+    background-color: #1e3d48;
+    font-family: 'Courier New', sans-serif;
+    color: #ffffff;
 }
 
-/* 2. 게임 프레임 (이미지 크기에 맞춘 상자) */
-/* [필수] width, height, border, display: flex */
-#game-frame {
-    width: 640px;
-    height: 420px;
-    border: 4px solid #000000;
+/* 전체 게임 화면 스타일 */
+/* 필수 요소: display(flex), width, height, margin, padding, background-color */
+.screen-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #2b5666;
     display: flex;
     flex-direction: column;
-    background-color: #000000;
-}
-
-/* 3. 상단 및 하단 어두운 바 */
-/* [필수] height, background-color */
-.top-bar, .bottom-bar {
-    height: 35px;
-    background-color: #3b3548;
-}
-
-/* 4. 하늘색 배경 영역 */
-/* [필수] height, background-color, display: flex */
-.sky-section {
-    height: 140px;
-    background-color: #92d1df;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-/* 로고 묶음 */
-/* [필수] display: flex */
-.logo-wrap {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-/* [필수] width, height, margin */
-#logo-img {
-    width: 48px;
-    height: 48px;
-    margin-right: 10px;
-}
-
-/* 타이틀 h1 */
-/* [필수] margin, padding */
-h1 {
-    color: #d12b2b;
-    font-size: 42px;
-    font-weight: 900;
-    margin: 0;
-    padding: 0;
-    text-shadow: 3px 3px 0px #4d0a0a;
-}
-
-/* 버전 span */
-/* [필수] display: inline-block, margin */
-.version-badge {
-    display: inline-block;
-    color: #e5cb68;
-    font-size: 13px;
-    margin-left: 8px;
-    margin-bottom: 6px;
-    align-self: flex-end;
-    text-shadow: 1px 1px 0px #000;
-}
-
-/* 서브 문구 h2 */
-/* [필수] margin */
-h2 {
-    color: #f7e06d;
-    font-size: 15px;
-    margin: 0;
-    position: absolute;
-    right: -30px;
-    bottom: -22px;
-    transform: rotate(-4deg);
-    text-shadow: 1px 1px 0px #000;
-    white-space: nowrap;
-}
-
-/* 5. 갈색 배경 영역 */
-/* [필수] height, background-color */
-.ground-section {
-    height: 210px;
-    background-color: #d6a86c;
-    position: relative;
-}
-
-/* 오른쪽 상단 접속 정보 */
-/* [필수] margin, padding */
-#user-panel {
-    position: absolute;
-    top: 8px;
-    right: 12px;
-    text-align: right;
-    margin: 0;
-    padding: 0;
-}
-
-.server-text {
-    color: #ffffff;
-    font-size: 12px;
-    margin: 0;
-    padding: 0;
-    text-shadow: 1px 1px 1px #000;
-    line-height: 1.3;
-}
-
-.user-link {
-    color: #ffffff;
-    text-decoration: underline;
-}
-
-/* 필수 제출용 표(table) - 우측 상단에 깔끔하게 배치 */
-/* [필수] border, padding */
-.status-table {
-    margin-top: 4px;
-    margin-left: auto;
-    border: 1px solid #ffffff;
-    font-size: 10px;
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.status-table th, .status-table td {
-    padding: 2px 4px;
-    border: 1px solid #ffffff;
-}
-
-/* 오른쪽 하단 메뉴 박스 */
-/* [필수] width, height, background-color, border, padding */
-#menu-box {
-    position: absolute;
-    bottom: 10px;
-    right: 12px;
-    width: 140px;
-    height: 155px;
-    background-color: #2b2538;
-    border: 3px solid #ab2929;
-    padding: 8px 10px;
+    justify-content: space-between;
+    padding: 20px;
     box-sizing: border-box;
 }
 
-/* h3 메뉴 헤더 */
-.menu-header {
-    color: #888888;
-    font-size: 9px;
-    margin: 0 0 4px 0;
-    padding: 0;
+/* 상단 타이틀 영역 */
+.header-section {
+    text-align: center;
+    margin-top: 10px;
 }
 
-/* ul 메뉴 리스트 */
-/* [필수] margin, padding */
-.menu-ul {
-    list-style: none;
+/* 필수 요소: display(inline-block), width, height */
+.game-logo {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+}
+
+.title-text {
+    margin: 5px 0;
+    font-size: 42px;
+    color: #e63946;
+}
+
+.sub-title {
     margin: 0;
-    padding: 0;
+    color: #f1faee;
+    font-size: 18px;
 }
 
-.menu-item {
-    color: #ffffff;
-    font-size: 13px;
-    padding: 2px 0;
+.version-info {
+    margin-top: 5px;
+    color: #a8dadc;
+    font-size: 14px;
+}
+
+/* 우측 상단 정보 영역 */
+.info-section {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.user-status {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* 필수 요소: border, background-color, display(inline-block), padding */
+.server-table {
+    display: inline-block;
+    background-color: #1d3557;
+    border: 1px solid #ffffff;
+    padding: 4px;
+}
+
+.server-table th, .server-table td {
+    border: 1px solid #457b9d;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+/* 하단 레이아웃 (공지사항과 메뉴 배치) */
+/* 필수 요소: display(flex) */
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+/* 왼쪽 안내 상자 */
+/* 필수 요소: border, width, padding, background-color */
+.notice-box {
+    width: 240px;
+    background-color: #1d3557;
+    border: 2px solid #a8dadc;
+    padding: 10px;
+}
+
+.notice-title {
+    margin: 0 0 5px 0;
     font-weight: bold;
 }
 
-/* [필수] display: inline-block, margin */
-.arrow {
-    display: inline-block;
-    margin-right: 4px;
-    color: #ffffff;
-}
-
-/* 필수 제출용 ol 리스트 - 메뉴판 제일 아래에 은은하게 포함 */
-.history-preview {
-    margin-top: 4px;
-}
-
-.history-list {
+.notice-list {
     margin: 0;
-    padding-left: 14px;
-    color: #777799;
-    font-size: 9px;
+    padding-left: 20px;
+    font-size: 12px;
+}
+
+/* 오른쪽 메뉴 상자 (이미지의 빨간 테두리 상자) */
+/* 필수 요소: border, width, padding, background-color */
+#menu-box {
+    width: 200px;
+    background-color: #2b1f2d;
+    border: 4px solid #d62828;
+    padding: 15px;
+}
+
+.menu-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-list li {
+    margin-bottom: 12px;
+}
+
+/* 필수 요소: display(inline-block) */
+.menu-link {
+    display: inline-block;
+    width: 100%;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu-link:hover, .menu-link.active {
+    color: #ffdd57;
 }
