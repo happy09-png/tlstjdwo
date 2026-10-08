@@ -1,108 +1,88 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>포켓로그(PokéRogue) 소개 웹사이트</title>
-    <!-- [HTML 12] link: 외부 CSS 스타일시트 연결 -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포켓로그 게임 소개</title>
+  <!-- [필수] link 태그: 외부 CSS 연결 -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- [HTML 4] div, [HTML 13] class, [HTML 14] id 사용 -->
-    <div id="main-container" class="container">
-        
-        <!-- 상단 헤더 영역 -->
-        <header class="header-section">
-            <!-- [HTML 10] img (alt 속성 포함) -->
-            <img src="pokerogue_logo.png" alt="포켓로그 메인 로고" class="logo-img">
-            
-            <!-- [HTML 1] h1~h3 (h1 사용) -->
-            <h1>포켓로그 (PokéRogue)</h1>
-            
-            <!-- [HTML 2] p, [HTML 3] br, [HTML 5] span -->
-            <p>
-                웹 브라우저에서 즐기는 <span class="highlight">포켓몬 로그라이크</span> 게임!<br>
-                자신만의 포켓몬 파티를 구성하여 끝없는 모험에 도전하세요.
-            </p>
-        </header>
+  <!-- [필수] id 및 class 속성 사용 -->
+  <!-- 상단 제목 영역 -->
+  <div id="header" class="header-box">
+    <!-- [필수] h1, h2, h3 태그 사용 -->
+    <h1>PokéRogue</h1>
+    <h2>포켓로그 게임 소개 웹사이트</h2>
+    <h3>픽셀 그래픽 레트로 로그라이크 포켓몬 게임</h3>
+  </div>
 
-        <!-- 메인 콘텐츠 영역 (Flexbox 레이아웃 적용) -->
-        <div class="content-wrapper">
-            
-            <!-- 왼쪽: 게임 상세 정보 및 안내 -->
-            <div class="info-box">
-                <!-- [HTML 1] h2 사용 -->
-                <h2>게임 정보</h2>
-                
-                <!-- [HTML 11] 표 (table, tr, th, td 사용) -->
-                <table id="game-info-table">
-                    <tr>
-                        <th>장르</th>
-                        <th>플랫폼</th>
-                        <th>주 이용자</th>
-                    </tr>
-                    <tr>
-                        <td>로그라이크 RPG</td>
-                        <td>웹 브라우저</td>
-                        <td>10대~20대 게이머</td>
-                    </tr>
-                </table>
-
-                <!-- [HTML 1] h3 사용 -->
-                <h3>주요 특징</h3>
-                <!-- [HTML 6] ul, [HTML 8] li 사용 -->
-                <ul class="feature-list">
-                    <li>별도 설치 없이 웹 브라우저에서 무료로 실행</li>
-                    <li>수백 가지 포켓몬 수집 및 육성 요소</li>
-                    <li>랜덤 요소와 전략적 플레이의 조화</li>
-                </ul>
-
-                <h3>플레이 방법</h3>
-                <!-- [HTML 7] ol, [HTML 8] li 사용 -->
-                <ol class="guide-list">
-                    <li>스타팅 포켓몬을 선택합니다.</li>
-                    <li>적 포켓몬과 배틀하여 아이템과 경험치를 얻습니다.</li>
-                    <li>파티를 강화하며 더 높은 스테이지에 도전합니다.</li>
-                </ol>
-
-                <!-- [HTML 9] a (외부 링크) -->
-                <div class="link-area">
-                    <a href="https://pokerogue.net" target="_blank" class="external-link">포켓로그 공식 사이트 바로가기</a>
-                </div>
-            </div>
-
-            <!-- 오른쪽: 목표 디자인 메뉴 박스 (레트로 UI) -->
-            <div class="game-menu-box">
-                <div class="menu-header">메인 메뉴</div>
-                <ul class="menu-list">
-                    <li class="menu-item" onclick="selectMenu('계속하기')">
-                        <span class="arrow">▶</span> 계속하기
-                    </li>
-                    <li class="menu-item" onclick="selectMenu('새 게임')">
-                        <span class="arrow">▶</span> 새 게임
-                    </li>
-                    <li class="menu-item" onclick="selectMenu('불러오기')">
-                        <span class="arrow">▶</span> 불러오기
-                    </li>
-                    <li class="menu-item" onclick="selectMenu('플레이 이력')">
-                        <span class="arrow">▶</span> 플레이 이력
-                    </li>
-                    <li class="menu-item" onclick="selectMenu('설정')">
-                        <span class="arrow">▶</span> 설정
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-
+  <!-- 메인 레이아웃 영역 (게임 화면 + 오른쪽 메뉴) -->
+  <div id="main-content" class="container">
+    
+    <!-- 왼쪽: 게임 이미지 및 설명 -->
+    <div class="game-screen">
+      <!-- [필수] img 태그 (alt 속성 포함) -->
+      <img src="https://via.placeholder.com/400x200?text=Pok%C3%A9Rogue+Game" alt="포켓로그 게임 메인 화면" class="game-img">
+      
+      <!-- [필수] p, br, span 태그 사용 -->
+      <p>
+        포켓로그는 웹 브라우저에서 바로 즐길 수 있는 레트로 포켓몬 게임입니다.<br>
+        <span class="highlight">나만의 포켓몬 팀</span>을 구성하여 모험을 떠나보세요!
+      </p>
     </div>
 
-    <!-- 간단한 자바스크립트 (유의사항의 JS 누적 사용 반영) -->
-    <script>
-        function selectMenu(menuName) {
-            alert("'" + menuName + "' 메뉴를 선택했습니다!");
-        }
-    </script>
+    <!-- 오른쪽: 게임 메뉴 영역 -->
+    <div class="menu-box">
+      <h3>게임 메뉴</h3>
+      <!-- [필수] ul, li, a 태그 사용 -->
+      <ul class="menu-list">
+        <li><a href="#" class="btn">▶ 계속하기</a></li>
+        <li><a href="#" class="btn">새 게임</a></li>
+        <li><a href="#" class="btn">불러오기</a></li>
+        <li><a href="#" class="btn">플레이 이력</a></li>
+        <li><a href="#" class="btn">설정</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- 하단 상세 정보 영역 -->
+  <div id="info-section" class="info-container">
+    
+    <h2>게임 주요 특징</h2>
+    <!-- [필수] ul, li 사용 -->
+    <ul>
+      <li>웹 브라우저 기반으로 설치 없이 플레이 가능</li>
+      <li>레트로 감성의 픽셀 그래픽 연출</li>
+    </ul>
+
+    <h2>플레이 순서</h2>
+    <!-- [필수] ol, li 사용 -->
+    <ol>
+      <li>시작 포켓몬을 선택합니다.</li>
+      <li>웨이브를 진행하며 포켓몬 배틀 및 포획을 진행합니다.</li>
+    </ol>
+
+    <h2>게임 정보 안내</h2>
+    <!-- [필수] 표 태그: table, tr, th, td 사용 -->
+    <table class="info-table">
+      <tr>
+        <th>구분</th>
+        <th>내용</th>
+      </tr>
+      <tr>
+        <td>장르</td>
+        <td>로그라이크 / RPG</td>
+      </tr>
+      <tr>
+        <td>주 이용자</td>
+        <td>10대~20대 게임 이용자</td>
+      </tr>
+    </table>
+
+  </div>
+
 </body>
 </html>
