@@ -1,132 +1,118 @@
-/* [CSS 1] background-color, [CSS 5] margin, [CSS 6] padding 사용 */
+/* [필수] background-color, margin, padding 사용 */
 body {
-    background-color: #2b263a; /* 어두운 레트로 배경색 */
-    color: #ffffff;
-    font-family: 'Malgun Gothic', sans-serif;
-    margin: 0;
-    padding: 20px;
+  background-color: #2b2b36;
+  color: #ffffff;
+  margin: 0;
+  padding: 20px;
 }
 
-/* [CSS 2] border, [CSS 3] width 사용 */
-#main-container {
-    width: 90%;
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #1f1a2e;
-    border: 3px solid #5a4b7c;
+/* 상단 헤더 영역 */
+/* [필수] border, width, height 사용 */
+#header {
+  background-color: #3b3b4f;
+  border: 2px solid #5a5a75;
+  width: 100%;
+  height: auto;
+  margin: 0 0 20px 0;
+  padding: 15px;
 }
 
-/* 헤더 로고 크기 설정 ([CSS 3] width, [CSS 4] height) */
-.header-section {
-    text-align: center;
-    margin-bottom: 25px;
+/* [필수] display: flex 사용 */
+.container {
+  display: flex;
+  background-color: #1f1f2e;
+  border: 1px solid #444444;
+  width: 100%;
+  height: auto;
+  margin: 0 0 20px 0;
+  padding: 20px;
 }
 
-.logo-img {
-    width: 260px;
-    height: auto;
+/* 왼쪽 게임 소개 박스 */
+.game-screen {
+  width: 60%;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
 }
 
-.highlight {
-    color: #ffde00;
-    font-weight: bold;
+.game-img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #777777;
 }
 
-/* [CSS 7] display: flex 사용 (배치 구도를 수평으로 나눔) */
-.content-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-/* 왼쪽 게임 설명 박스 */
-.info-box {
-    flex: 1;
-    min-width: 280px;
-    background-color: #252033;
-    padding: 15px;
-    border: 2px solid #3d3453;
-}
-
-/* [HTML 11] 표(table) 스타일 정의 */
-#game-info-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-#game-info-table th, #game-info-table td {
-    border: 1px solid #5a4b7c;
-    padding: 8px;
-    text-align: center;
-}
-
-#game-info-table th {
-    background-color: #3b3152;
-    color: #ffde00;
-}
-
-.feature-list, .guide-list {
-    padding-left: 20px;
-    line-height: 1.6;
-}
-
-/* [CSS 7] display: inline-block 사용 */
-.external-link {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #e74c3c;
-    color: #ffffff;
-    text-decoration: none;
-    border: 2px solid #ffffff;
-    font-weight: bold;
-}
-
-.external-link:hover {
-    background-color: #ff5e4d;
-}
-
-/* 오른쪽 게임 메뉴 박스 (목표 디자인 빨간 테두리 메뉴 반영) */
-.game-menu-box {
-    width: 200px;
-    height: 240px;
-    background-color: #110d18;
-    border: 4px solid #cc3333;
-    padding: 15px;
-}
-
-.menu-header {
-    text-align: center;
-    color: #ffde00;
-    font-weight: bold;
-    margin-bottom: 15px;
+/* 오른쪽 메뉴 박스 */
+.menu-box {
+  width: 35%;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+  background-color: #2a2a3d;
+  border: 2px solid #ffcc00;
 }
 
 .menu-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-/* 마우스 올렸을 때(hover) 레트로 효과 부여 */
-.menu-item {
-    padding: 8px 5px;
-    margin-bottom: 6px;
-    background-color: #241a33;
-    border: 1px solid #4a3860;
-    cursor: pointer;
-    font-size: 14px;
+.menu-list li {
+  margin: 10px 0;
 }
 
-.menu-item:hover {
-    background-color: #e74c3c;
-    color: #ffffff;
+/* 버튼 스타일 */
+/* [필수] display: inline-block 사용 */
+.btn {
+  display: inline-block;
+  width: 80%;
+  height: 30px;
+  background-color: #ffcc00;
+  color: #000000;
+  border: 1px solid #ffffff;
+  margin: 5px;
+  padding: 5px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.menu-item .arrow {
-    display: inline-block;
-    margin-right: 5px;
-    color: #ffde00;
+/* 마우스를 올렸을 때 바뀌는 효과 */
+.btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* span 강조 태그 스타일 */
+.highlight {
+  display: inline-block;
+  background-color: #e63946;
+  padding: 2px 5px;
+}
+
+/* 하단 정보 영역 */
+.info-container {
+  background-color: #2b2b36;
+  border: 1px solid #555555;
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+  padding: 15px;
+}
+
+/* 표(Table) 스타일 */
+.info-table {
+  width: 100%;
+  border: 1px solid #ffffff;
+}
+
+.info-table th {
+  background-color: #4a4e69;
+  border: 1px solid #ffffff;
+  padding: 8px;
+}
+
+.info-table td {
+  background-color: #333348;
+  border: 1px solid #ffffff;
+  padding: 8px;
 }
