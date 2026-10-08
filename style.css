@@ -4,115 +4,151 @@ body {
   color: #ffffff;
   margin: 0;
   padding: 20px;
+  font-family: sans-serif;
 }
 
 /* 상단 헤더 영역 */
 /* [필수] border, width, height 사용 */
-#header {
-  background-color: #3b3b4f;
-  border: 2px solid #5a5a75;
+#header-area {
+  background-color: #3f3f54;
+  border: 2px solid #6c6c8a;
   width: 100%;
   height: auto;
   margin: 0 0 20px 0;
   padding: 15px;
+  text-align: center;
 }
 
+/* 게임 메인 화면 상자 (사진의 하늘색 배경 느낌 반영) */
 /* [필수] display: flex 사용 */
-.container {
+.game-box {
   display: flex;
-  background-color: #1f1f2e;
-  border: 1px solid #444444;
+  background-color: #8bb0c2;
+  border: 4px solid #1a1a24;
   width: 100%;
   height: auto;
   margin: 0 0 20px 0;
   padding: 20px;
+  box-sizing: border-box;
 }
 
-/* 왼쪽 게임 소개 박스 */
-.game-screen {
-  width: 60%;
+/* 게임 스크린 왼쪽 영역 */
+.screen-top {
+  width: 65%;
   height: auto;
-  margin: 10px;
-  padding: 10px;
+  background-color: #c4dbe8;
+  color: #1a1a24;
+  margin: 0 15px 0 0;
+  padding: 15px;
+  border: 2px solid #5d7e8f;
 }
 
 .game-img {
   width: 100%;
-  height: auto;
-  border: 1px solid #777777;
+  height: 200px;
+  border: 2px solid #222222;
 }
 
-/* 오른쪽 메뉴 박스 */
+.desc-text {
+  margin: 10px 0 0 0;
+  padding: 5px;
+}
+
+/* [필수] display: inline-block 사용 */
+.highlight {
+  display: inline-block;
+  background-color: #ffcc00;
+  color: #000000;
+  font-weight: bold;
+  padding: 2px 6px;
+  margin: 2px;
+}
+
+/* 오른쪽 메뉴 박스 (사진의 보라/붉은 테두리 게임 UI 반영) */
 .menu-box {
-  width: 35%;
+  width: 30%;
   height: auto;
-  margin: 10px;
-  padding: 10px;
-  background-color: #2a2a3d;
-  border: 2px solid #ffcc00;
+  background-color: #2e2836;
+  border: 4px solid #8c2d2d;
+  margin: 0;
+  padding: 15px;
 }
 
 .menu-list {
-  padding: 0;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .menu-list li {
   margin: 10px 0;
+  padding: 0;
 }
 
-/* 버튼 스타일 */
-/* [필수] display: inline-block 사용 */
-.btn {
+/* 메뉴 버튼 스타일 */
+.menu-btn {
   display: inline-block;
-  width: 80%;
-  height: 30px;
-  background-color: #ffcc00;
-  color: #000000;
-  border: 1px solid #ffffff;
-  margin: 5px;
-  padding: 5px;
+  width: 100%;
+  height: 35px;
+  background-color: #3d3548;
+  color: #ffffff;
+  border: 2px solid #5c506d;
+  margin: 0;
+  padding: 6px 0 0 10px;
   text-decoration: none;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+/* 마우스 올렸을 때 효과 */
+.menu-btn:hover {
+  background-color: #8c2d2d;
+  color: #ffcc00;
+  border: 2px solid #ffcc00;
+}
+
+.menu-btn.active {
+  color: #ffffff;
   font-weight: bold;
 }
 
-/* 마우스를 올렸을 때 바뀌는 효과 */
-.btn:hover {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-/* span 강조 태그 스타일 */
-.highlight {
-  display: inline-block;
-  background-color: #e63946;
-  padding: 2px 5px;
-}
-
-/* 하단 정보 영역 */
-.info-container {
-  background-color: #2b2b36;
-  border: 1px solid #555555;
+/* 하단 정보 박스 */
+.info-box {
+  background-color: #3b3b4f;
+  border: 2px solid #5a5a75;
   width: 100%;
   height: auto;
-  margin: 10px 0;
-  padding: 15px;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.step-list, .feature-list {
+  margin: 10px 0 20px 20px;
+  padding: 0;
+}
+
+.step-list li, .feature-list li {
+  margin: 5px 0;
+  padding: 2px;
 }
 
 /* 표(Table) 스타일 */
-.info-table {
+.plan-table {
   width: 100%;
   border: 1px solid #ffffff;
+  margin: 10px 0 0 0;
 }
 
-.info-table th {
-  background-color: #4a4e69;
+.plan-table th {
+  background-color: #5d5d7a;
   border: 1px solid #ffffff;
   padding: 8px;
 }
 
-.info-table td {
-  background-color: #333348;
+.plan-table td {
+  background-color: #2b2b38;
   border: 1px solid #ffffff;
   padding: 8px;
+  text-align: center;
 }
