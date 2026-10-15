@@ -196,3 +196,9 @@ h2 {
     color: #777799;
     font-size: 9px;
 }
+
+.history-list {
+    list-style: none; /* 숫자(1.) 제거 */
+    padding: 0;       /* 기본 들여쓰기 여백 제거 */
+    margin: 0;
+}
