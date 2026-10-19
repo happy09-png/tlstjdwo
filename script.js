@@ -22,3 +22,12 @@ loginForm.onsubmit = function (e) {
     alert("로그인 실패: 아이디 또는 비밀번호가 틀렸습니다.");
   }
 };
+
+//색 바꾸기
+let text_message = document.querySelector('#text_message');
+  text_message.onclick = function () {
+    const r = Math.floor(Math.random()*256);
+    const g = Math.floor(Math.random()*256);
+    const b = Math.floor(Math.random()*256);
+    text_message.style.color = 'rgb(' + r + ',' + g + ',' + b + ')';
+  };
