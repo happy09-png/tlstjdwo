@@ -8,8 +8,8 @@ counterBtn.addEventListener('click', () => {
     countNumber.textContent = `${count}층`;
 });
 
-const id = "junamsu";
-const pw = "helloworld";
+const id = "HAPPY";
+const pw = "HAPPY";
 
 // HTML 요소 가져오기
 const userLink = document.querySelector(".user-link");
