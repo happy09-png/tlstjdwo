@@ -196,3 +196,73 @@ h2 {
     color: #777799;
     font-size: 9px;
 }
+
+/* 화면 전체를 덮는 어두운 배경 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* 모달 숨김 처리 */
+.hidden {
+    display: none;
+}
+
+/* 모달 창 중앙 박스 */
+.modal-content {
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    position: relative;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* 닫기(X) 버튼 */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #888;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* 폼 입력창 및 버튼 배치 */
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+#loginForm input, #loginForm button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#loginForm button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#loginForm button:hover {
+    background-color: #0056b3;
+}
